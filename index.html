@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erdoğan Başer — Game Developer</title>
+  <meta name="description"
+    content="Erdoğan Başer — Game developer and computer engineer. Unity, artificial intelligence and game technologies." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Erdoğan Başer — Game Developer" />
+  <meta property="og:description"
+    content="Game developer and computer engineer. Unity, artificial intelligence and game technologies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://erdo.is-a.dev" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%237c5cff'/%3E%3Ctext x='50' y='68' font-size='52' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EEB%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- 3D solar system background -->
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">
+        <span class="logo-mark">P</span>
+        <span class="logo-text">Porphy</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main menu">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#education" data-i18n="nav.education">Education</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" id="langEn" class="lang-btn active" aria-pressed="true">EN</button>
+          <button type="button" id="langTr" class="lang-btn" aria-pressed="false">TR</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="hero-kicker" data-i18n="hero.kicker">Game Developer</p>
+        <h1 class="hero-name">Erdoğan <span class="grad">Başer</span></h1>
+        <p class="hero-role" data-i18n="hero.role">Computer Engineer - Game Developer</p>
+        <p class="hero-desc" data-i18n="hero.desc">I work in game development and artificial intelligence, with
+          professional experience in Unity and a background in technology education.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Get in Touch</a>
+          <a href="https://www.linkedin.com/in/erdogan-baser" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z" />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="about.tag">01 — About</span>
+          <h2 data-i18n="about.title">Profile</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p data-i18n="about.p1">I graduated from Keçiören Science High School in 2022 and hold a degree in Computer
+              Engineering from the University of Turkish Aeronautical Association.</p>
+            <p data-i18n="about.p2">My professional experience covers Unity game development, artificial intelligence
+              studies and mentoring at the T3 Foundation. I currently work as a Game Developer at Bug Production.</p>
+            <p data-i18n="about.p3">In addition to technical work, I have experience in event organization and
+              sponsorship management.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="exp.tag">02 — Experience</span>
+          <h2 data-i18n="exp.title">Professional Experience</h2>
+        </div>
+        <div class="timeline">
+
+          <article class="tl-item">
+            <div class="tl-dot current"></div>
+            <div class="tl-card glass">
+              <div class="tl-top">
+                <h3>Bug Production</h3>
+                <span class="tl-badge live" data-i18n="exp.current">Current</span>
+              </div>
+              <p class="tl-role" data-i18n="exp.bug.role">Game Developer</p>
+              <p class="tl-date" data-i18n="exp.bug.date">September 2025 — Present · Ankara, Türkiye</p>
+              <p class="tl-desc" data-i18n="exp.bug.desc">Development of commercial game projects.</p>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <div class="tl-top">
+                <h3 data-i18n="exp.ai.name">AI and Technology Academy</h3>
+              </div>
+              <p class="tl-role" data-i18n="exp.ai.role">Scholar</p>
+              <p class="tl-date" data-i18n="exp.ai.date">January 2025 — July 2025 · 7 months</p>
+              <p class="tl-desc" data-i18n="exp.ai.desc">Intensive training and project development in artificial
+                intelligence.</p>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <div class="tl-top">
+                <h3>TrendPiyasa</h3>
+              </div>
+              <p class="tl-role" data-i18n="exp.trend.role">Unity 3D Developer</p>
+              <p class="tl-date" data-i18n="exp.trend.date">October 2024 — June 2025 · Ankara, Türkiye</p>
+              <p class="tl-desc" data-i18n="exp.trend.desc">Development of 3D applications and games with Unity.</p>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <div class="tl-top">
+                <h3 data-i18n="exp.t3.name">T3 Foundation</h3>
+              </div>
+              <p class="tl-role" data-i18n="exp.t3.role">Instructor / Mentor</p>
+              <p class="tl-date" data-i18n="exp.t3.date">January 2024 — January 2025 · Ankara, Türkiye</p>
+              <p class="tl-desc" data-i18n="exp.t3.desc">Technical training and mentorship for young technology
+                students.</p>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <div class="tl-top">
+                <h3>Kliniker GmbH</h3>
+              </div>
+              <p class="tl-role" data-i18n="exp.kliniker.role">Unity Developer</p>
+              <p class="tl-date" data-i18n="exp.kliniker.date">January 2023 — May 2023 · 5 months</p>
+              <p class="tl-desc" data-i18n="exp.kliniker.desc">Unity-based application development.</p>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <div class="tl-top">
+                <h3>Deneyap Türkiye</h3>
+              </div>
+              <p class="tl-role" data-i18n="exp.deneyap.role">Phase 1 Graduate</p>
+              <p class="tl-date" data-i18n="exp.deneyap.date">June 2019 — June 2022 · 3 years</p>
+              <p class="tl-desc" data-i18n="exp.deneyap.desc">Training in robotics, software and design.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="edu.tag">03 — Education</span>
+          <h2 data-i18n="edu.title">Education</h2>
+        </div>
+        <div class="edu-grid">
+          <div class="edu-card glass">
+            <h3 data-i18n="edu.uni.name">University of Turkish Aeronautical Association</h3>
+            <p class="edu-degree" data-i18n="edu.uni.degree">B.Sc., Computer Engineering</p>
+            <p class="edu-date" data-i18n="edu.uni.date">2022 — June 2026</p>
+          </div>
+          <div class="edu-card glass">
+            <h3 data-i18n="edu.hs.name">Keçiören Science High School</h3>
+            <p class="edu-degree" data-i18n="edu.hs.degree">High School</p>
+            <p class="edu-date" data-i18n="edu.hs.date">Graduated in 2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="skills.tag">04 — Skills</span>
+          <h2 data-i18n="skills.title">Skills &amp; Qualifications</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-panel glass">
+            <h3 data-i18n="skills.core">Core Competencies</h3>
+            <div class="chips">
+              <span class="chip">Unity &amp; C#</span>
+              <span class="chip" data-i18n="skills.chip.gamedev">Game Development</span>
+              <span class="chip">Python</span>
+              <span class="chip" data-i18n="skills.chip.ai">Artificial Intelligence</span>
+              <span class="chip" data-i18n="skills.chip.events">Event Organization</span>
+              <span class="chip" data-i18n="skills.chip.sponsor">Sponsorship Management</span>
+              <span class="chip" data-i18n="skills.chip.mentoring">Mentoring</span>
+            </div>
+          </div>
+
+          <div class="skill-panel glass">
+            <h3 data-i18n="skills.languages">Languages</h3>
+            <div class="lang-list">
+              <div class="lang">
+                <div class="lang-head"><span data-i18n="skills.lang.tr">Turkish</span><span
+                    data-i18n="skills.lang.tr.level">Native</span></div>
+                <div class="bar"><span class="bar-fill" style="width:100%"></span></div>
+              </div>
+              <div class="lang">
+                <div class="lang-head"><span data-i18n="skills.lang.en">English</span><span
+                    data-i18n="skills.lang.en.level">Full Professional</span></div>
+                <div class="bar"><span class="bar-fill" style="width:90%"></span></div>
+              </div>
+              <div class="lang">
+                <div class="lang-head"><span data-i18n="skills.lang.fr">French</span><span
+                    data-i18n="skills.lang.fr.level">Limited Working</span></div>
+                <div class="bar"><span class="bar-fill" style="width:45%"></span></div>
+              </div>
+              <div class="lang">
+                <div class="lang-head"><span data-i18n="skills.lang.de">German</span><span
+                    data-i18n="skills.lang.de.level">Elementary</span></div>
+                <div class="bar"><span class="bar-fill" style="width:25%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-panel glass">
+            <h3 data-i18n="skills.certs">Certifications</h3>
+            <ul class="cert-list">
+              <li data-i18n="skills.cert1">Artificial Intelligence</li>
+              <li data-i18n="skills.cert2">Cyber Security</li>
+              <li data-i18n="skills.cert3">Energy Technologies</li>
+              <li data-i18n="skills.cert4">Nanotechnology and Materials Science</li>
+            </ul>
+          </div>
+
+          <div class="skill-panel glass award">
+            <h3 data-i18n="skills.awards">Honors &amp; Awards</h3>
+            <div class="award-body">
+              <p class="award-title">Latin American Space Challenge 2022</p>
+              <p class="award-desc" data-i18n="skills.award.desc">Third place with a CanSat / PocketQube project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card glass">
+          <span class="section-tag" data-i18n="contact.tag">05 — Contact</span>
+          <h2 data-i18n="contact.title">Get in Touch</h2>
+          <p data-i18n="contact.desc">For professional inquiries and collaboration, feel free to reach out.</p>
+          <div class="contact-actions">
+            <a href="mailto:erdoganbaser.is@gmail.com" class="btn btn-primary btn-lg">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-10 6L2 7" />
+              </svg>
+              erdoganbaser.is@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/erdogan-baser" target="_blank" rel="noopener"
+              class="btn btn-ghost btn-lg">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z" />
+              </svg>
+              linkedin.com/in/erdogan-baser
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.text">© 2026 Erdoğan Başer. All rights reserved.</p>
+      <a href="#top" class="back-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
