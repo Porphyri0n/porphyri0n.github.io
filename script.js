@@ -18,12 +18,14 @@
       "nav.experience": "Experience",
       "nav.education": "Education",
       "nav.skills": "Skills",
+      "nav.tools": "Tools",
       "nav.contact": "Contact",
 
       "hero.kicker": "Game Developer",
       "hero.role": "Computer Engineer — University of Turkish Aeronautical Association",
       "hero.desc": "I work in game development and artificial intelligence, with professional experience in Unity and a background in technology education.",
       "hero.cta": "Get in Touch",
+      "hero.tools": "Unity Tools",
       "hero.status": "Open to new opportunities",
 
       "about.tag": "01 — About",
@@ -108,12 +110,14 @@
       "nav.experience": "Deneyim",
       "nav.education": "Eğitim",
       "nav.skills": "Yetenekler",
+      "nav.tools": "Araçlar",
       "nav.contact": "İletişim",
 
       "hero.kicker": "Oyun Geliştirici",
       "hero.role": "Bilgisayar Mühendisi — Türk Hava Kurumu Üniversitesi",
       "hero.desc": "Oyun geliştirme ve yapay zeka alanlarında çalışıyorum. Unity ile profesyonel deneyime ve teknoloji eğitimi geçmişine sahibim.",
       "hero.cta": "İletişime Geçin",
+      "hero.tools": "Unity Araçları",
       "hero.status": "Yeni fırsatlara açık",
 
       "about.tag": "01 — Hakkımda",
@@ -191,6 +195,16 @@
       "footer.text": "© 2026 Erdoğan Başer. Tüm hakları saklıdır."
     }
   };
+
+  /* Sub pages can extend / override the base dictionary by defining
+     window.PAGE_I18N = { en: {...}, tr: {...} } before this script. */
+  var pageI18n = window.PAGE_I18N || {};
+  Object.keys(pageI18n).forEach(function (lang) {
+    if (!I18N[lang]) I18N[lang] = {};
+    Object.keys(pageI18n[lang]).forEach(function (key) {
+      I18N[lang][key] = pageI18n[lang][key];
+    });
+  });
 
   var btnEn = document.getElementById("langEn");
   var btnTr = document.getElementById("langTr");

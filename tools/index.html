@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unity Tools — Erdoğan Başer</title>
+  <meta name="description"
+    content="Unity Editor tools by Erdoğan Başer — AutoBuild &amp; Version Logger: automated versioning, structured build output, changelogs and build history." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Unity Tools — Erdoğan Başer" />
+  <meta property="og:description"
+    content="Unity Editor tools by Erdoğan Başer — AutoBuild &amp; Version Logger: automated versioning, structured build output, changelogs and build history." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://erdo.is-a.dev/tools/" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%237c5cff'/%3E%3Ctext x='50' y='68' font-size='52' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'%3EEB%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- 3D solar system background -->
+  <canvas id="scene" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../" class="logo">
+        <span class="logo-mark">P</span>
+        <span class="logo-text">Porphy</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main menu">
+        <a href="../" data-i18n="nav.home">Home</a>
+        <a href="#overview" data-i18n="nav.overview">Overview</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" id="langEn" class="lang-btn active" aria-pressed="true">EN</button>
+          <button type="button" id="langTr" class="lang-btn" aria-pressed="false">TR</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero-sub">
+      <div class="container hero-inner">
+        <p class="hero-kicker" data-i18n="hero.kicker">Unity Tools</p>
+        <h1 class="hero-name">Unity <span class="grad">Tools</span></h1>
+        <p class="hero-desc" data-i18n="hero.desc">Editor extensions that automate the repetitive parts of game
+          development. Each tool comes from a real production need and adds nothing to your runtime builds.</p>
+      </div>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="overview.tag">01 — Tool</span>
+          <h2 data-i18n="overview.title">AutoBuild &amp; Version Logger</h2>
+        </div>
+        <div class="tool-card glass">
+          <div class="tool-badges">
+            <span class="chip">v1.0.0</span>
+            <span class="chip">Unity 2021.3 LTS+</span>
+            <span class="chip">Editor-only</span>
+          </div>
+          <p data-i18n="overview.p1">An autonomous build and version management tool for the Unity Editor. It automates
+            semantic version increments, structured build folder naming, changelog generation and build history logging
+            — all in one click.</p>
+          <p data-i18n="overview.p2">No setup is required: import the package and press Build. If a build fails, the
+            project version and platform build numbers are rolled back automatically. All code lives in an Editor-only
+            assembly, so nothing is added to your runtime builds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="features.tag">02 — Features</span>
+          <h2 data-i18n="features.title">What it does</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card glass">
+            <h3 data-i18n="features.f1.title">One-click versioning</h3>
+            <p data-i18n="features.f1.desc">Patch, Minor or Major bumps are applied to PlayerSettings when the build
+              starts — the next version is always visible before you commit to it.</p>
+          </div>
+          <div class="feature-card glass">
+            <h3 data-i18n="features.f2.title">Structured build output</h3>
+            <p data-i18n="features.f2.desc">Builds are written to [Product]_v[Version]_[Platform] folders, with an
+              optional date/time suffix so repeated builds never overwrite each other.</p>
+          </div>
+          <div class="feature-card glass">
+            <h3 data-i18n="features.f3.title">Changelog generation</h3>
+            <p data-i18n="features.f3.desc">Free-form change notes become a Changelog.md in the build folder, with the
+              newest release always on top.</p>
+          </div>
+          <div class="feature-card glass">
+            <h3 data-i18n="features.f4.title">Build history</h3>
+            <p data-i18n="features.f4.desc">Every build — including failed ones — is logged with timestamp, version,
+              platform, duration, size and status in a per-project JSON file.</p>
+          </div>
+          <div class="feature-card glass">
+            <h3 data-i18n="features.f5.title">Mobile build numbers</h3>
+            <p data-i18n="features.f5.desc">Android bundleVersionCode and iOS buildNumber are incremented
+              automatically, as required by Google Play and the App Store.</p>
+          </div>
+          <div class="feature-card glass">
+            <h3 data-i18n="features.f6.title">Build button integration</h3>
+            <p data-i18n="features.f6.desc">The tool can replace Unity's stock Build button with its own window. Prefer
+              the default flow? Turn it off with a single checkbox.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUTPUT ============ -->
+    <section class="section" id="output">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="output.tag">03 — Output</span>
+          <h2 data-i18n="output.title">What it generates</h2>
+        </div>
+        <div class="output-grid">
+          <div class="output-card glass">
+            <h3 data-i18n="output.folder">Build folder structure</h3>
+            <pre class="codeblock">D:/Builds/
+└─ MyGame_v1.2.4_Windows64/
+   ├─ MyGame_v1.2.4_Windows64.exe
+   └─ Changelog.md
+
+UserSettings/AutoBuildVersionLogger/
+└─ InternalBuildHistory.json</pre>
+          </div>
+          <div class="output-card glass">
+            <h3 data-i18n="output.changelog">Generated Changelog.md</h3>
+            <pre class="codeblock">## Version: v1.2.4
+**Date:** June 07, 2026
+**Platform:** Windows64
+
+### Changes:
+- Fixed multiplayer synchronization issues.
+- Added new visual effects to the main lobby.</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="faq.tag">04 — FAQ</span>
+          <h2 data-i18n="faq.title">Frequently asked questions</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-card glass">
+            <h3 data-i18n="faq.q1">Does it affect runtime builds?</h3>
+            <p data-i18n="faq.a1">No. All code is Editor-only and is stripped from player builds — the tool adds
+              nothing to your game.</p>
+          </div>
+          <div class="faq-card glass">
+            <h3 data-i18n="faq.q2">Can I keep Unity's standard Build dialog?</h3>
+            <p data-i18n="faq.a2">Yes. Untick “Intercept Unity's Build button” under Build Options and the tool only
+              opens from the Tools menu.</p>
+          </div>
+          <div class="faq-card glass">
+            <h3 data-i18n="faq.q3">Which platforms are supported?</h3>
+            <p data-i18n="faq.a3">Any platform Unity can build. Friendly folder names are provided for Windows, macOS,
+              Linux, Android, iOS and WebGL.</p>
+          </div>
+          <div class="faq-card glass">
+            <h3 data-i18n="faq.q4">What happens when a build fails?</h3>
+            <p data-i18n="faq.a4">The project version and platform build numbers are rolled back to their previous
+              values, and the failed attempt is still recorded in the build history.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card glass">
+          <span class="section-tag" data-i18n="contact.tag">05 — Contact</span>
+          <h2 data-i18n="contact.title">Get the tool</h2>
+          <p data-i18n="contact.desc">For access, licensing and support inquiries, feel free to reach out by email.</p>
+          <div class="contact-actions">
+            <a href="mailto:erdoganbaser.is@gmail.com" class="btn btn-primary btn-lg">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-10 6L2 7" />
+              </svg>
+              erdoganbaser.is@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p data-i18n="footer.text">© 2026 Erdoğan Başer. All rights reserved.</p>
+      <a href="#top" class="back-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script>
+    window.PAGE_I18N = {
+      en: {
+        "meta.title": "Unity Tools — Erdoğan Başer",
+        "meta.desc": "Unity Editor tools by Erdoğan Başer — AutoBuild & Version Logger: automated versioning, structured build output, changelogs and build history.",
+
+        "nav.home": "Home",
+        "nav.overview": "Overview",
+        "nav.features": "Features",
+        "nav.faq": "FAQ",
+
+        "hero.kicker": "Unity Tools",
+        "hero.desc": "Editor extensions that automate the repetitive parts of game development. Each tool comes from a real production need and adds nothing to your runtime builds.",
+
+        "overview.tag": "01 — Tool",
+        "overview.title": "AutoBuild &amp; Version Logger",
+        "overview.p1": "An autonomous build and version management tool for the Unity Editor. It automates semantic version increments, structured build folder naming, changelog generation and build history logging — all in one click.",
+        "overview.p2": "No setup is required: import the package and press Build. If a build fails, the project version and platform build numbers are rolled back automatically. All code lives in an Editor-only assembly, so nothing is added to your runtime builds.",
+
+        "features.tag": "02 — Features",
+        "features.title": "What it does",
+        "features.f1.title": "One-click versioning",
+        "features.f1.desc": "Patch, Minor or Major bumps are applied to PlayerSettings when the build starts — the next version is always visible before you commit to it.",
+        "features.f2.title": "Structured build output",
+        "features.f2.desc": "Builds are written to [Product]_v[Version]_[Platform] folders, with an optional date/time suffix so repeated builds never overwrite each other.",
+        "features.f3.title": "Changelog generation",
+        "features.f3.desc": "Free-form change notes become a Changelog.md in the build folder, with the newest release always on top.",
+        "features.f4.title": "Build history",
+        "features.f4.desc": "Every build — including failed ones — is logged with timestamp, version, platform, duration, size and status in a per-project JSON file.",
+        "features.f5.title": "Mobile build numbers",
+        "features.f5.desc": "Android bundleVersionCode and iOS buildNumber are incremented automatically, as required by Google Play and the App Store.",
+        "features.f6.title": "Build button integration",
+        "features.f6.desc": "The tool can replace Unity's stock Build button with its own window. Prefer the default flow? Turn it off with a single checkbox.",
+
+        "output.tag": "03 — Output",
+        "output.title": "What it generates",
+        "output.folder": "Build folder structure",
+        "output.changelog": "Generated Changelog.md",
+
+        "faq.tag": "04 — FAQ",
+        "faq.title": "Frequently asked questions",
+        "faq.q1": "Does it affect runtime builds?",
+        "faq.a1": "No. All code is Editor-only and is stripped from player builds — the tool adds nothing to your game.",
+        "faq.q2": "Can I keep Unity's standard Build dialog?",
+        "faq.a2": "Yes. Untick “Intercept Unity's Build button” under Build Options and the tool only opens from the Tools menu.",
+        "faq.q3": "Which platforms are supported?",
+        "faq.a3": "Any platform Unity can build. Friendly folder names are provided for Windows, macOS, Linux, Android, iOS and WebGL.",
+        "faq.q4": "What happens when a build fails?",
+        "faq.a4": "The project version and platform build numbers are rolled back to their previous values, and the failed attempt is still recorded in the build history.",
+
+        "contact.tag": "05 — Contact",
+        "contact.title": "Get the tool",
+        "contact.desc": "For access, licensing and support inquiries, feel free to reach out by email."
+      },
+      tr: {
+        "meta.title": "Unity Araçları — Erdoğan Başer",
+        "meta.desc": "Erdoğan Başer'in Unity Editor araçları — AutoBuild & Version Logger: otomatik sürümleme, yapılandırılmış build çıktısı, changelog ve build geçmişi.",
+
+        "nav.home": "Ana Sayfa",
+        "nav.overview": "Genel Bakış",
+        "nav.features": "Özellikler",
+        "nav.faq": "SSS",
+
+        "hero.kicker": "Unity Araçları",
+        "hero.desc": "Oyun geliştirmenin tekrarlayan adımlarını otomatikleştiren Unity Editor eklentileri. Her araç gerçek bir üretim ihtiyacından doğar ve çalışma zamanı build'lerinize hiçbir şey eklemez.",
+
+        "overview.tag": "01 — Araç",
+        "overview.title": "AutoBuild &amp; Version Logger",
+        "overview.p1": "Unity Editor için otonom bir build ve sürüm yönetimi aracı. Semantik sürüm artırımı, yapılandırılmış build klasörü adlandırması, changelog üretimi ve build geçmişi kaydını tek tıkla otomatikleştirir.",
+        "overview.p2": "Kurulum gerektirmez: paketi içe aktarın ve Build'e basın. Build başarısız olursa proje sürümü ve platform build numaraları otomatik olarak geri alınır. Tüm kod yalnızca Editor tarafında çalışır; oyununuzun build'lerine hiçbir şey eklenmez.",
+
+        "features.tag": "02 — Özellikler",
+        "features.title": "Neler yapıyor",
+        "features.f1.title": "Tek tıkla sürümleme",
+        "features.f1.desc": "Patch, Minor veya Major artırımlar build başladığında PlayerSettings'e uygulanır — bir sonraki sürüm her zaman önceden görünür.",
+        "features.f2.title": "Yapılandırılmış build çıktısı",
+        "features.f2.desc": "Build'ler [Product]_v[Version]_[Platform] klasörlerine yazılır; isteğe bağlı tarih/saat son eki sayesinde tekrarlanan build'ler birbirinin üzerine yazılmaz.",
+        "features.f3.title": "Changelog üretimi",
+        "features.f3.desc": "Serbest biçimli değişiklik notları, build klasöründe en yeni sürüm en üstte olacak şekilde bir Changelog.md dosyasına dönüşür.",
+        "features.f4.title": "Build geçmişi",
+        "features.f4.desc": "Başarısız olanlar dahil her build; zaman damgası, sürüm, platform, süre, boyut ve durum bilgileriyle projeye özel bir JSON dosyasına kaydedilir.",
+        "features.f5.title": "Mobil build numaraları",
+        "features.f5.desc": "Android bundleVersionCode ve iOS buildNumber, Google Play ve App Store'un gerektirdiği şekilde otomatik olarak artırılır.",
+        "features.f6.title": "Build düğmesi entegrasyonu",
+        "features.f6.desc": "Araç, Unity'nin standart Build düğmesinin yerine kendi penceresini açabilir. Varsayılan akışı mı tercih ediyorsunuz? Tek bir onay kutusuyla kapatın.",
+
+        "output.tag": "03 — Çıktı",
+        "output.title": "Neler üretir",
+        "output.folder": "Build klasör yapısı",
+        "output.changelog": "Üretilen Changelog.md",
+
+        "faq.tag": "04 — SSS",
+        "faq.title": "Sıkça sorulan sorular",
+        "faq.q1": "Çalışma zamanı build'lerini etkiler mi?",
+        "faq.a1": "Hayır. Tüm kod yalnızca Editor tarafındadır ve oyuncu build'lerinden ayıklanır — araç oyununuza hiçbir şey eklemez.",
+        "faq.q2": "Unity'nin standart Build penceresini kullanmaya devam edebilir miyim?",
+        "faq.a2": "Evet. Build Options altındaki “Intercept Unity's Build button” seçeneğini kapattığınızda araç yalnızca Tools menüsünden açılır.",
+        "faq.q3": "Hangi platformlar destekleniyor?",
+        "faq.a3": "Unity'nin build alabildiği tüm platformlar. Windows, macOS, Linux, Android, iOS ve WebGL için okunabilir klasör adları sağlanır.",
+        "faq.q4": "Build başarısız olursa ne olur?",
+        "faq.a4": "Proje sürümü ve platform build numaraları önceki değerlerine geri alınır; başarısız deneme yine de build geçmişine kaydedilir.",
+
+        "contact.tag": "05 — İletişim",
+        "contact.title": "Araca erişim",
+        "contact.desc": "Erişim, lisanslama ve destek talepleriniz için e-posta ile iletişime geçebilirsiniz."
+      }
+    };
+  </script>
+  <script src="../script.js" defer></script>
+</body>
+
+</html>
