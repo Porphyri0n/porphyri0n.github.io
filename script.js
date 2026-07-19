@@ -18,7 +18,7 @@
       "nav.experience": "Experience",
       "nav.education": "Education",
       "nav.skills": "Skills",
-      "nav.tools": "Tools",
+      "nav.unityAssets": "Unity Assets",
       "nav.contact": "Contact",
 
       "hero.kicker": "Game Developer",
@@ -110,7 +110,7 @@
       "nav.experience": "Deneyim",
       "nav.education": "Eğitim",
       "nav.skills": "Yetenekler",
-      "nav.tools": "Araçlar",
+      "nav.unityAssets": "Unity Varlıkları",
       "nav.contact": "İletişim",
 
       "hero.kicker": "Oyun Geliştirici",
