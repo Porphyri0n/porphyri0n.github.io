@@ -8,6 +8,32 @@
   <meta name="description"
     content="Erdoğan Başer — Game developer and computer engineer. Unity, artificial intelligence and game technologies." />
 
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    var analyticsConsent = "denied";
+    try {
+      if (localStorage.getItem("portfolio_cookie_consent_v1") === "all") {
+        analyticsConsent = "granted";
+      }
+    } catch (e) { /* keep analytics denied */ }
+
+    gtag("consent", "default", {
+      ad_storage: analyticsConsent,
+      ad_user_data: analyticsConsent,
+      ad_personalization: analyticsConsent,
+      analytics_storage: analyticsConsent,
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XT6B4GY7GV"></script>
+  <script>
+    gtag("js", new Date());
+    gtag("config", "G-XT6B4GY7GV");
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:title" content="Erdoğan Başer — Game Developer" />
   <meta property="og:description"
