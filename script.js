@@ -19,6 +19,7 @@
       "nav.education": "Education",
       "nav.skills": "Skills",
       "nav.unityAssets": "Unity Assets",
+      "nav.projects": "Projects",
       "nav.contact": "Contact",
 
       "hero.kicker": "Game Developer",
@@ -96,7 +97,14 @@
       "skills.awards": "Honors &amp; Awards",
       "skills.award.desc": "Third place with a CanSat / PocketQube project.",
 
-      "contact.tag": "05 — Contact",
+      "projects.tag": "05 — Projects",
+      "projects.title": "Projects",
+      "projects.hrl.title": "Contour Radius Analysis",
+      "projects.hrl.desc": "A single-page tool that reads a Heidenhain Klartext (.H) or ISO program and finds the DR range you may stay in when dialling stock, from three separate limits: where the control reports “tool radius too large”, where plunge and retract moves cut back the stock you left, and the outward-offset floor. Permanent damage, sharp inside corners and narrow passages are listed separately. Everything runs in the browser — the program is never uploaded.",
+      "projects.hrl.open": "Open the tool",
+      "projects.hrl.repo": "Source on GitHub",
+
+      "contact.tag": "06 — Contact",
       "contact.title": "Get in Touch",
       "contact.desc": "For professional inquiries and collaboration, feel free to reach out.",
 
@@ -111,6 +119,7 @@
       "nav.education": "Eğitim",
       "nav.skills": "Yetenekler",
       "nav.unityAssets": "Unity Varlıkları",
+      "nav.projects": "Projeler",
       "nav.contact": "İletişim",
 
       "hero.kicker": "Oyun Geliştirici",
@@ -188,7 +197,14 @@
       "skills.awards": "Ödüller",
       "skills.award.desc": "CanSat / PocketQube projesi ile dünya üçüncülüğü.",
 
-      "contact.tag": "05 — İletişim",
+      "projects.tag": "05 — Projeler",
+      "projects.title": "Projeler",
+      "projects.hrl.title": "Kontur Yarıçap Analizi",
+      "projects.hrl.desc": "Heidenhain Klartext (.H) veya ISO programını okuyup DR ile pay verirken hangi aralıkta kalabileceğini üç ayrı sınırdan bulan tek sayfalık araç: kumandanın “takım yarıçapı çok büyük” dediği nokta, dalış ve geri çekilme hareketlerinin bıraktığın payı geri kestiği sınır, ve dış ofset tabanı. Kalıcı hasar, keskin iç köşeler ve dar geçitler ayrıca listelenir. Her şey tarayıcıda çalışır — program hiçbir yere yüklenmez.",
+      "projects.hrl.open": "Aracı aç",
+      "projects.hrl.repo": "GitHub'da kaynak",
+
+      "contact.tag": "06 — İletişim",
       "contact.title": "İletişime Geçin",
       "contact.desc": "Profesyonel talepleriniz ve iş birlikleri için iletişime geçebilirsiniz.",
 
